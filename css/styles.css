@@ -1,0 +1,375 @@
+/* 
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
+}
+
+p,
+a,
+li,
+figcaption {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  background-color: black;
+  padding: 0 8rem;
+  margin-bottom: -10vh;
+  /* border: 5px solid #605e5e; */
+}
+
+/* __________________________________________________________________________Navbar */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+header img {
+  width: 300px;
+}
+
+.navbar nav {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0 15px;
+  /* color: white; */
+  color: #ff4739;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+/* __________________________________________________________________________////////First Section */
+
+#first-parent-element {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 75%;
+  /* border: 1px solid #605e5e; */
+}
+
+#content-text-1 {
+  width: 40%; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED WIDTH FROM 30% TO 40%*/
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 4rem;
+  text-align: left;
+  color: white;
+  /* border: 3px solid #605e5e; */
+
+  /*--------------------------------------------get rid of the border when done */
+}
+
+#content-text-1 h2 {
+  font-size: 6rem; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED FONT SIZE FROM 4REM TO 6REM*/
+  padding-bottom: 2.5rem;
+  font-family: "Archivo Black", sans-serif;
+  /*--------------------------------------------change font size down at around 1360px wide */
+}
+
+.section-buttons {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background-color: #ff4739;
+  color: #141414; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED COLOR FROM WHITE TO #141414*/
+  border-style: none;
+  /* border-radius: 10px; */
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 36%; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED WIDTH FROM 120px TO 36%*/
+}
+
+#content-img-1 {
+  width: 60%;
+  height: 100%;
+  /* ------------------------change width to around 50-60% for mobile, adjust header font size next to it accordingly (about 1090px wide? */
+}
+
+#content-img-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .navbar nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.navbar nav ul a {
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Archivo Black', sans-serif;
+} */
+
+/* #second-section {
+  align-items: flex-start;
+} */
+
+/* __________________________________________________________________________////////Second Section */
+
+#second-section {
+  background: #141414;
+}
+
+#second-parent-element {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60%;
+  /* border: 1px solid #605e5e; */
+}
+
+#content-img-2 {
+  width: 60%;
+  height: 100%;
+  /* border: 1px solid #605e5e; */
+}
+
+#content-img-2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#content-text-2 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /*---------------------change to centre later*/
+  align-items: flex-start;
+  padding: 2rem 4rem;
+}
+
+#content-text-2 h2 {
+  font-size: 3.5rem;
+  font-family: "Archivo Black", sans-serif;
+  color: #ff4739;
+}
+
+#content-text-2 p {
+  font-size: 1rem;
+}
+
+/* __________________________________________________________________________////////Third Section */
+
+#third-section {
+  justify-content: center;
+}
+
+#third-parent-element {
+  display: flex;
+  height: 75%;
+  /* border: 1px solid #605e5e; */
+}
+
+#content-text-3 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  /* list-style: disc; */
+  padding: 2rem 4rem;
+  background-color: #141414;
+  /* border: 1px solid #605e5e; */
+}
+
+#content-text-3 h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 3.5rem;
+  color: #ff4739;
+}
+
+#content-text-3 ul {
+  margin-left: 2.5rem;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#content-text-3 li {
+  font-size: 1rem;
+}
+
+#buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.outlined-section-buttons {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background-color: transparent;
+  color: #ff4739;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #ff4739;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 36%; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED WIDTH FROM 120px TO 36%*/
+}
+
+#content-img-3 {
+  width: 50%;
+  height: 100%;
+}
+
+#content-img-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* __________________________________________________________________________////////Footer */
+
+footer {
+  border-top: 1px solid #ff4739;
+  display: flex;
+  justify-content: space-between;
+  height: 25vh;
+  width: 100%;
+  padding: 1rem 8rem;
+}
+
+footer nav {
+  height: 100%;
+  width: 15%;
+}
+
+footer ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  justify-content: center;
+  column-gap: 10rem;
+  list-style: none;
+  text-align: left;
+}
+
+footer li {
+  padding-bottom: 0.5rem;
+}
+
+footer li:last-child {
+  padding-bottom: 0;
+}
+
+footer a {
+  color: #ff4739;
+  font-size: 0.8rem;
+}
+
+#logo-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#logo-div p {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #606060;
+}
+
+footer img {
+  width: 40%;
+  padding-top: 8rem;
+}
+
+#footer-social-media {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  text-align: left;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#social-meadia-content {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-social-media h4 {
+  color: #ff4739;
+}
+
+#footer-social-media p {
+  /* font-family: ;
+  font-size: ; */
+  padding-top: 1rem;
+}
+
+#footer-social-media-icons {
+  display: flex;
+  justify-content: flex-end;
+}
