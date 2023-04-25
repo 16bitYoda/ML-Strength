@@ -1,0 +1,129 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
+  font-style: italic;
+}
+
+h4 {
+  color: #ff4739;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+p,
+a,
+li,
+figcaption {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: #141414;
+  border-top: 3px #ff46391e solid;
+  /* border-top: 4px solid #ff4739; */
+  /* height: 25vh; */
+  height: fit-content;
+  width: 100%;
+  padding: 2rem 8rem;
+}
+
+footer:last-child {
+  align-self: center;
+}
+
+footer nav {
+  height: 100%;
+  width: 15%;
+  /* padding-top: 2rem; */
+  text-align: center;
+}
+
+footer ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  column-gap: 10rem;
+  list-style: none;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer li {
+  padding-bottom: 0.5rem;
+}
+
+footer li:last-child {
+  padding-bottom: 0;
+}
+
+footer a {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer nav button {
+  text-align: center;
+  padding: 0.8rem 0.3rem;
+  background-color: transparent;
+  color: #ff4739; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED COLOR FROM WHITE TO #141414*/
+  border-style: solid;
+  border-color: #ff4739;
+  border-radius: 30px;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 6rem;
+}
+
+#logo-div {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 0.9rem; */
+  text-align: center;
+}
+
+#logo-div p {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #cfcfcf;
+}
+
+#logo-div a {
+  width: 40%;
+}
+
+#logo-div img {
+  width: 100%;
+  /* padding: 2rem 0; */
+}
+
+#footer-social-media {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#footer-social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}

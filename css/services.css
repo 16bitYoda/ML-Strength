@@ -1,0 +1,101 @@
+/* 
+font-family: 'Archivo Black', sans-serif; (weight: 400)
+font-family: 'Oswald', sans-serif; (weight: 400, 500, 600, 700)
+font-family: 'Poppins', sans-serif; (weight: 200+i, 400+i, 500+i, 700+i, 900+i)*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
+  font-style: italic;
+}
+
+p,
+a,
+li,
+figcaption {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background-image {
+  display: block;
+  background-image: url(/images/groupworkout1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.461);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#first-section {
+  padding: 2rem;
+  gap: 6rem;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #1414149b;
+  width: 50%;
+  height: 60%;
+  border: 3px #ff4739 solid;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+}
+
+#first-section h2 {
+  font-size: 3em;
+  color: #ff4739;
+}
+
+article {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1em;
+  /* background-color: #1414149b; */
+}
+
+@media (max-width: 1580px) {
+  #first-section {
+    gap: 1rem;
+    width: 60%;
+    height: auto;
+  }
+
+  #first-section h2 {
+    font-size: 2em;
+  }
+
+  article {
+    font-size: 0.9em;
+  }
+}

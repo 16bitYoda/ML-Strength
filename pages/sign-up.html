@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/sign-up.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,400;0,500;0,700;0,900;1,200;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("header").load("/common/header.html");
+      });
+    </script>
+    <script>
+      $(function () {
+        $("footer").load("/common/footer.html");
+      });
+    </script>
+    <script src="/javascript/sign-up.js"></script>
+    <title>Join Now!</title>
+  </head>
+  <body>
+    <header></header>
+
+    <section>
+      <form id="registration-form" method="post">
+        <h2>Registration Form</h2>
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            pattern="[A-Za-z ]{3,30}"
+            maxlength="30"
+            title="Please enter a valid name (only letters and spaces, between 3 and 30 characters)"
+          />
+          <div class="error-message" id="name-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div class="error-message" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            required
+            min="18"
+            max="100"
+          />
+          <div class="error-message" id="age-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">--Please select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="error-message" id="gender-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="membership">Membership Type:</label>
+          <select id="membership" name="membership" required>
+            <option value="">--Please select--</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <option value="ultimate">Ultimate</option>
+          </select>
+          <div class="error-message" id="membership-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="[0-9]{10}"
+            title="Please enter a valid 10-digit phone number"
+          />
+          <div class="error-message" id="phone-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            required
+            maxlength="200"
+          ></textarea>
+          <div class="error-message" id="address-error"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+
+      <p><a href="#" id="help-link">Need Help?</a></p>
+
+      <div id="help-dialog">
+        <h3>Registration Form Help</h3>
+        <p>
+          Please fill out all fields and click the 'Submit' button to complete
+          your registration.
+        </p>
+        <button id="close-button">Close</button>
+      </div>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>
