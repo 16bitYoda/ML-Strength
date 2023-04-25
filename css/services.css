@@ -43,7 +43,7 @@ section {
 
 #background-image {
   display: block;
-  background-image: url(/images/groupworkout1.png);
+  background-image: url(./images/groupworkout1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
