@@ -43,7 +43,7 @@ section {
 
 #background-image {
   display: block;
-  background-image: url(https://16bityoda.github.io/ML-Strength/images/groupworkout1.webp);
+  background-image: url(/images/groupworkout1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -80,8 +80,12 @@ section {
 article {
   text-align: center;
   padding: 2rem;
-  font-size: 1em;
   /* background-color: #1414149b; */
+}
+
+article p {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 1580px) {
