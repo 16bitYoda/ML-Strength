@@ -4,130 +4,143 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://16bityoda.github.io/ML-Strength/css/sign-up.css" />
+    <link rel="stylesheet" href="/css/sign-up.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $("header").load("https://16bityoda.github.io/ML-Strength/common/header.html");
+    <script src="/javascript/sign-up.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("header").load("/common/header.html");
       });
     </script>
-    <script>
-      $(function () {
-        $("footer").load("https://16bityoda.github.io/ML-Strength/common/footer.html");
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("footer").load("/common/footer.html");
       });
     </script>
-    <script src="https://16bityoda.github.io/ML-Strength/javascript/sign-up.js"></script>
+    <script type="text/javascript" src="/javascript/sign-up.js"></script>
     <title>Join Now!</title>
   </head>
   <body>
     <header></header>
 
     <section>
-      <form id="registration-form" method="post">
-        <h2>Registration Form</h2>
+    
+      <h2>Fill out our registration form below</h2>
 
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            pattern="[A-Za-z ]{3,30}"
-            maxlength="30"
-            title="Please enter a valid name (only letters and spaces, between 3 and 30 characters)"
-          />
-          <div class="error-message" id="name-error"></div>
-        </div>
+      <div class="web-form-div">
+        <form>
+          <h3>Registration form:</h3>
+          <!-- If using a label then each form input and icon needs to be nested within it's own div element -->
+          
+          <label for="first-name" class="required-label">First name:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
+            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="off">
+            <div class="error-message" id="name-error"></div><br>
+          </div>
+          
+          <label for="Last-name" class="required-label">Surname:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
+            <input placeholder="Surname" type="text" id="surname" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="off">
+            <div class="error-message" id="name-error"></div><br>
+          </div>
 
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <div class="error-message" id="email-error"></div>
-        </div>
+          <label for="membership-start-date">Membership start date:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <input type="date" id="membership-start-date" class="input-field" name="membership-start-date">
+            <div class="error-message" id="name-error"></div><br>
+          </div>
 
-        <div class="form-group">
-          <label for="age">Age:</label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            required
-            min="18"
-            max="100"
-          />
-          <div class="error-message" id="age-error"></div>
-        </div>
+          <label for="email" class="required-label">Email:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-at" style="color: #ff4739;"></i>
+            <input placeholder="Email" type="email" id="email" class="input-field" name="email" autocomplete="off" required >
+            <div class="error-message" id="name-error"></div><br>
+          </div>
+          
+          <label for="address" class="required-label">Address:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-location-dot" style="color: #ff4739;"></i>
+            <input type="text" id="address" name="address" class="input-field" pattern="[a-zA-Z0-9]{1,}" required placeholder="Address">
+            <div class="error-message" id="name-error"></div><br>
+          </div>
 
-        <div class="form-group">
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender" required>
-            <option value="">--Please select--</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-          <div class="error-message" id="gender-error"></div>
-        </div>
+          <label for="contact-num" class="required-label">Contact number:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-phone" style="color: #ff4739;"></i>
+            <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="off" pattern="[0-9]{10}" required placeholder="Contact number">
+            <div class="error-message" id="name-error"></div><br>
+          </div>
 
-        <div class="form-group">
-          <label for="membership">Membership Type:</label>
-          <select id="membership" name="membership" required>
-            <option value="">--Please select--</option>
-            <option value="basic">Basic</option>
-            <option value="premium">Premium</option>
-            <option value="ultimate">Ultimate</option>
-          </select>
-          <div class="error-message" id="membership-error"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            pattern="[0-9]{10}"
-            title="Please enter a valid 10-digit phone number"
-          />
-          <div class="error-message" id="phone-error"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="address">Address:</label>
-          <textarea
-            id="address"
-            name="address"
-            required
-            maxlength="200"
-          ></textarea>
-          <div class="error-message" id="address-error"></div>
-        </div>
-
-        <div class="form-group">
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
-
-      <p><a href="#" id="help-link">Need Help?</a></p>
-
-      <div id="help-dialog">
-        <h3>Registration Form Help</h3>
-        <p>
-          Please fill out all fields and click the 'Submit' button to complete
-          your registration.
-        </p>
-        <button id="close-button">Close</button>
+          
+          <label for="medical">Medical conditions:</label>
+          <div class="input-icons">
+            <!-- <i class="fa fa-envelope icon"></i> -->
+            <i class="fa-solid fa-suitcase-medical" style="color: #ff4739;"></i>
+            <textarea id="medical" name="medical" class="input-field" placeholder="Please list any allergies and/or medical conditions incase of an emergency."></textarea>
+            <div class="error-message" id="name-error"></div><br>
+          </div>
+          
+          
+          
+          
+          <input class="section-buttons" type="submit" value="Submit">
+        </form>
       </div>
     </section>
-
     <footer></footer>
   </body>
-</html>
+  </html>
+  <!-- <h2>Sign Up Now</h2>
+
+  <div id="form-parent">
+    <form id="form" action="/" method="GET">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Name must contain only letters!">
+      <div class="error-message" id="name-error"></div><br>
+    
+      <label for="birthdate">Date of birth:</label>
+      <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2030-12-31" title="Please enter a valid date!">
+      <div class="error-message" id="birthdate-error"></div><br>
+    
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <div class="error-message" id="gender-error"></div><br>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address!">
+      <div class="error-message" id="email-error"></div><br>
+    
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" pattern="^[a-zA-Z0-9\s,'-]*$" title="Please enter a valid address!">
+      <div class="error-message" id="address-error"></div><br>
+    
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a 10 digit phone number!">
+      <div class="error-message" id="phone-error"></div><br>
+    
+      <label for="medical-conditions">Medical conditions:</label>
+      <textarea id="medical-conditions" name="medical-conditions" placeholder="Please list any allergies or Medical Conditions you have for emergencies"></textarea>
+      <div class="error-message" id="medical-conditions-error"></div><br>
+
+      <button class="section-buttons" type="submit">Submit</button>
+    </form>
+  </div> -->

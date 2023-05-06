@@ -46,12 +46,14 @@ section {
 }
 
 #first-parent-element {
-  border: 3px #303030 solid;
+  /* border: 3px #303030 solid; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   height: 75%;
+  
+
 }
 
 #first-parent-element article {
@@ -85,12 +87,13 @@ section {
 
 /* ______________________________________________________________________second section */
 #second-parent-element {
-  border: 3px #303030 solid;
+  /* border: 3px #303030 solid; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   height: 75%;
+  
 }
 
 #second-parent-element img {
@@ -120,6 +123,7 @@ section {
 
 #third-section {
   flex-direction: column;
+  justify-content: center;
 }
 
 #third-parent-element {
@@ -200,4 +204,89 @@ section {
     font-size: 0.9em;
     padding-top: 3rem;
   }
+}
+
+@media (max-width: 900px) {
+  #first-section {
+    justify-content: center;
+    height: fit-content;
+    padding-top: 2rem;
+  }
+
+  #first-parent-element {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #first-parent-element article {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #first-parent-element img {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  #second-section {
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  #second-parent-element {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #second-parent-element img {
+    width: 100%;
+  }
+
+  #second-parent-element article {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  #third-section {
+    justify-content: flex-start;
+  }
+
+  #third-parent-element {
+    width: 100%;
+    border: none;
+  }
+
+  #third-parent-element img {
+    height: 50%;
+    object-fit: cover;
+
+  }
+  
+  #third-section article {
+    height: fit-content;
+    margin-top: -267px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #141414;
+  }
+  
+  #third-section article h2 {
+    font-size: 2rem;
+    color: #ff4739;
+    text-transform: uppercase;
+  }
+  
+  #third-section article p {
+    font-size: 1em;
+    padding-top: 3rem;
+  }
+  
+  #third-section span {
+    color: #ff4739;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-decoration: underline;
+  }
+
 }

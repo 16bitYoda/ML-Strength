@@ -22,18 +22,27 @@ figcaption {
   font-size: 16px;
 }
 
-footer {
+.desktop-layout {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
   background-color: #141414;
   border-top: 3px #ff46391e solid;
-  /* border-top: 4px solid #ff4739; */
-  /* height: 25vh; */
-  height: fit-content;
+  height: 300px;
   width: 100%;
   padding: 2rem 8rem;
 }
+
+/* footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #141414;
+  border-top: 3px #ff46391e solid;
+  height: 300px;
+  width: 100%;
+  padding: 2rem 8rem;
+} */
 
 footer:last-child {
   align-self: center;
@@ -42,8 +51,9 @@ footer:last-child {
 footer nav {
   height: 100%;
   width: 15%;
-  /* padding-top: 2rem; */
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 footer ul {
@@ -51,6 +61,7 @@ footer ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   column-gap: 10rem;
   list-style: none;
   text-align: center;
@@ -59,10 +70,16 @@ footer ul {
 
 footer li {
   padding-bottom: 0.5rem;
+  width: 140px;
 }
 
 footer li:last-child {
   padding-bottom: 0;
+}
+
+footer li:hover {
+  background-color: none;
+  border-radius: 5px;
 }
 
 footer a {
@@ -73,18 +90,34 @@ footer a {
   text-transform: uppercase;
 }
 
+footer nav a:hover {
+  font-size: .9rem;
+}
+
+footer a:active {
+  color: #ff4739;
+  text-decoration: underline 2px;
+}
+
 footer nav button {
   text-align: center;
-  padding: 0.8rem 0.3rem;
+  padding: .8rem 0.3rem;
   background-color: transparent;
   color: #ff4739; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED COLOR FROM WHITE TO #141414*/
   border-style: solid;
   border-color: #ff4739;
   border-radius: 30px;
-  width: fit-content;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: .8rem;
   width: 6rem;
+}
+
+footer button {
+  cursor: pointer;
+}
+
+footer button:hover {
+  font-size: .9rem;
 }
 
 #logo-div {
@@ -93,7 +126,6 @@ footer nav button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* gap: 0.9rem; */
   text-align: center;
 }
 
@@ -109,7 +141,6 @@ footer nav button {
 
 #logo-div img {
   width: 100%;
-  /* padding: 2rem 0; */
 }
 
 #footer-social-media {
@@ -126,4 +157,60 @@ footer nav button {
   justify-content: space-between;
   gap: 1rem;
   padding-top: 1.5rem;
+}
+
+#footer-social-media-icons a {
+  width: 30px;
+  text-align: center;
+}
+
+.mobile-layout {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .desktop-layout {
+    display: none;}
+
+  .mobile-layout {
+    display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items: center;
+   padding: 1rem;
+   padding-top: 2rem;
+   gap: 1rem;
+  }
+
+  .mobile-layout nav {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 2px #ff46391e solid;
+  }
+
+  #logo-div {
+    width: 100%;
+  }
+
+  #logo-div a {
+    width: 40%;
+  }
+
+  #footer-social-media {
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  #copyright {
+    width: 100%;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  #copyright p {
+    font-size: .8em;
+    padding-bottom: 1rem;
+    border-bottom: 2px #ff46391e solid;
+
+  }
 }
