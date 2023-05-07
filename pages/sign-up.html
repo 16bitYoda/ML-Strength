@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Sign Up | Sign Up"ML Strength Sign Up form">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://16bityoda.github.io/ML-Strength/css/sign-up.css" />
+    <link rel="stylesheet" href="/css/sign-up.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,80 +15,113 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("header").load("https://16bityoda.github.io/ML-Strength/common/header.html");
+        $("header").load("/common/header.html");
       });
     </script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("footer").load("https://16bityoda.github.io/ML-Strength/common/footer.html");
+        $("footer").load("/common/footer.html");
       });
     </script>
-    <script type="text/javascript" src="https://16bityoda.github.io/ML-Strength/javascript/sign-up.js"></script>
+    <script type="text/javascript" src="/javascript/sign-up.js"></script>
+    <script>
+        function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+
+         if (popup.classList.contains("show")) {
+        popup.play();
+        } else {
+        popup.pause();
+        }
+      }
+
+        document.addEventListener("click", function(event) {
+        var popup = document.getElementById("myPopup");
+        var container = document.querySelector(".popup");
+        if (popup.classList.contains("show") && !container.contains(event.target)) {
+        popup.classList.remove("show");
+        popup.pause();
+        }
+      });
+
+        if (window.matchMedia("(max-width: 900px)").matches) {
+        var popup = document.querySelector(".popup");
+        popup.removeAttribute("onmouseover", "myFunction()");
+        popup.setAttribute("onclick", "myFunction()");
+      }
+      </script>
     <title>Join Now!</title>
   </head>
   <body>
     <header></header>
 
     <section>
-    
-      <h2>Fill out our registration form below</h2>
+      <div class="article-wrapper">
+        <article>
+          <p>Are you ready to take the next step in your fitness journey?</p> 
+          <p>Come and experience the ML Strength difference today!</p>
+          <p>We can't wait to see you in the gym!</p>
+        </article>
+        
+        <h2>Fill out our registration form below</h2>
+      </div>
+
 
       <div class="web-form-div">
         <form>
           <h3>Registration form:</h3>
-          <!-- If using a label then each form input and icon needs to be nested within it's own div element -->
+
+          <div class="popup" onmouseover="myFunction()">Help?
+            <!-- <span class="popuptext" id="myPopup">Popup text...</span> -->
+            <video class="popupvideo" id="myPopup" src="/videos/atoms-6785.mp4"></video>
+          </div> 
+
           
           <label for="first-name" class="required-label">First name:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="off">
+            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="on" title="Please enter a valid name (letters 2 only)">
             <div class="error-message" id="name-error"></div><br>
           </div>
           
           <label for="Last-name" class="required-label">Surname:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="Surname" type="text" id="surname" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="off">
-            <div class="error-message" id="name-error"></div><br>
+            <input placeholder="Surname" type="text" id="surname" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="on" title="Please enter a valid surname (letters only)">
+            <div class="error-message" id="surname-error"></div><br>
           </div>
 
           <label for="membership-start-date">Membership start date:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <input type="date" id="membership-start-date" class="input-field" name="membership-start-date">
-            <div class="error-message" id="name-error"></div><br>
+            <div class="error-message" id="membership-error"></div><br>
           </div>
 
           <label for="email" class="required-label">Email:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-at" style="color: #ff4739;"></i>
-            <input placeholder="Email" type="email" id="email" class="input-field" name="email" autocomplete="off" required >
-            <div class="error-message" id="name-error"></div><br>
+            <input placeholder="Email" type="email" id="email" class="input-field" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="on" required title="Please enter a valid email address">
+            <div class="error-message" id="email-error"></div><br>
           </div>
           
           <label for="address" class="required-label">Address:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-location-dot" style="color: #ff4739;"></i>
-            <input type="text" id="address" name="address" class="input-field" pattern="[a-zA-Z0-9]{1,}" required placeholder="Address">
-            <div class="error-message" id="name-error"></div><br>
+            <input type="text" id="address" name="address" class="input-field" pattern="^[#.0-9a-zA-Z\s,-]+$" required placeholder="Address" autocomplete="on" title="Please enter your current postal address">
+            <div class="error-message" id="address-error"></div><br>
           </div>
 
           <label for="contact-num" class="required-label">Contact number:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-phone" style="color: #ff4739;"></i>
-            <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="off" pattern="[0-9]{10}" required placeholder="Contact number">
-            <div class="error-message" id="name-error"></div><br>
+            <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="on" pattern="^^([0-9]{10}|[0-9]{4}\s[0-9]{3}\s[0-9]{3}|[0-9]{4}\s[0-9]{4}|[0-9]{8})$" required placeholder="Contact number" title="Enter a valid contact number (e.g. 04xx xxx xxx or 32xx xxxx)">
+            <div class="error-message" id="contact-num-error"></div><br>
           </div>
 
           
           <label for="medical">Medical conditions:</label>
           <div class="input-icons">
-            <!-- <i class="fa fa-envelope icon"></i> -->
             <i class="fa-solid fa-suitcase-medical" style="color: #ff4739;"></i>
             <textarea id="medical" name="medical" class="input-field" placeholder="Please list any allergies and/or medical conditions incase of an emergency."></textarea>
             <div class="error-message" id="name-error"></div><br>
@@ -97,51 +129,12 @@
           
           
           
-          
-          <input class="section-buttons" type="submit" value="Submit">
+          <button class="section-buttons" type="submit">Submit</button>
+          <!-- <input class="section-buttons" type="submit" value="Submit"> -->
+
         </form>
       </div>
     </section>
     <footer></footer>
   </body>
   </html>
-  <!-- <h2>Sign Up Now</h2>
-
-  <div id="form-parent">
-    <form id="form" action="/" method="GET">
-
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" pattern="[A-Za-z]+" title="Name must contain only letters!">
-      <div class="error-message" id="name-error"></div><br>
-    
-      <label for="birthdate">Date of birth:</label>
-      <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2030-12-31" title="Please enter a valid date!">
-      <div class="error-message" id="birthdate-error"></div><br>
-    
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      <div class="error-message" id="gender-error"></div><br>
-    
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address!">
-      <div class="error-message" id="email-error"></div><br>
-    
-      <label for="address">Address:</label>
-      <input type="text" id="address" name="address" pattern="^[a-zA-Z0-9\s,'-]*$" title="Please enter a valid address!">
-      <div class="error-message" id="address-error"></div><br>
-    
-      <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a 10 digit phone number!">
-      <div class="error-message" id="phone-error"></div><br>
-    
-      <label for="medical-conditions">Medical conditions:</label>
-      <textarea id="medical-conditions" name="medical-conditions" placeholder="Please list any allergies or Medical Conditions you have for emergencies"></textarea>
-      <div class="error-message" id="medical-conditions-error"></div><br>
-
-      <button class="section-buttons" type="submit">Submit</button>
-    </form>
-  </div> -->

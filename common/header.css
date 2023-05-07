@@ -265,6 +265,12 @@ header a:active {
     text-decoration: underline 2px;
   }
 }
+
+@media (max-width: 420px) {
+  .nav-toggle-label {
+    display: block;
+  }
+}
   
 
 

@@ -63,7 +63,7 @@ button:hover {
 
 #background-image {
   display: block;
-  background-image: url(https://16bityoda.github.io/ML-Strength/images/groupworkout1.webp);
+  background-image: url(/images/groupworkout1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,6 +128,58 @@ article p {
   font-size: 1em;
 }
 
+#timetable-below {
+  color: #ff4739;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* _________________________________________timetable */
+.wrapper {
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wrapper h2 {
+  font-size: 3rem;
+  color: #ff4739;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #303030;
+  /* padding: 1rem; */
+}
+
+caption, th, td {
+  padding: 1rem;
+}
+
+caption, th {
+  text-align: left;
+}
+
+caption {
+  background: #1f1f1f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+tr:nth-last-of-type(2n) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
+
 @media screen and (max-width: 1580px) {
   #first-section {
     gap: 1rem;
@@ -162,10 +214,6 @@ article p {
   }
 
 }
-
-
-
-
 
 @media screen and (max-width: 900px) {
   
@@ -209,4 +257,35 @@ article p {
 
   }
   
+}
+
+@media (max-width: 850px) {
+  #third-section {
+    height: fit-content;
+    padding: 2rem 0;
+  }
+  
+  th {
+    display: none;
+  }
+  
+  td {
+    display: grid;
+    grid-template-columns: 15ch auto;
+    padding: .5rem 1rem;
+  }
+
+  td:first-child {
+    padding-top: 2rem;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  td:before {
+    content: attr(data-cell) ": ";
+    font-weight: bold;
+    text-transform: capitalize;
+  }
 }
