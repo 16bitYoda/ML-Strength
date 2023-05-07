@@ -244,6 +244,20 @@ input[type="submit"]:hover {
     border: 2px solid #cbaa45;
     box-shadow: 0px 0px 10px #ffc10798;      /*used for when labels are taken away*/
   }
+
+  .popup {
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    margin-right: 10px;
+  }
+
+  .popup .popupvideo {
+    visibility: hidden;
+    /* visibility: visible; */
+    width: 70vw;
+    top: -32vh;
+    left: -62.5vw;
+  }
 }
 
 @media (max-width: 420px) {
@@ -268,24 +282,15 @@ input[type="submit"]:hover {
     display: none;
   }
 
-  .popup {
-    padding-bottom: 1rem;
-    padding-right: 2rem;
-  }
+  /* .popup {
+    margin-right: 10px;
+  } */
 
   .popup .popupvideo {
     visibility: hidden;
     /* visibility: visible; */
     width: 95vw;
-    background-color: #ff4739;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: -672%;
-    /* margin-left: -80px; */
+    top: -30vh;
+    left: -84vw;
   }
 }
