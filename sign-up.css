@@ -1,0 +1,269 @@
+/* 
+font-family: 'Archivo Black', sans-serif; (weight: 400)
+font-family: 'Oswald', sans-serif; (weight: 400, 500, 600, 700)
+font-family: 'Poppins', sans-serif; (weight: 200+i, 400+i, 500+i, 700+i, 900+i)*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
+  font-style: italic;
+}
+
+p,
+a,
+li,
+figcaption {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.section-buttons {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background-color: #ff4739;
+  color: black;
+  border-style: none;
+  border-radius: 3px;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 180px;
+  margin: auto;
+}
+
+
+.section-buttons:hover {
+  background-color: #ff6358;
+  cursor: pointer;
+}
+
+.section-buttons:active {
+  background-color: #ff4739;
+  text-decoration: underline;
+}
+
+.article-wrapper {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.article-wrapper article {
+  text-align: center;
+}
+
+.article-wrapper p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.article-wrapper h2 {
+  font-size: 2rem;
+  color: #ff4739;
+  padding-bottom: 2rem;
+}
+
+form {
+  max-width:500px;
+  max-height: fit-content;
+  margin:auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  background-color: #141414;
+  border-radius: 10px;
+}
+
+.input-icons svg {      
+  position: absolute;
+  padding: 10px;
+  padding-left: 7px;
+  min-width: 20px;
+  margin-top: 2px;
+}
+
+.input-icons {
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-color: rgb(131, 135, 146);
+  border-radius: 10px;
+  padding-left: 30px;
+}
+
+form h3 {
+  padding-bottom: 1.5rem;
+}
+
+form label {
+  padding-bottom: .5rem;
+}
+
+#medical {
+  height: 100px;
+}
+
+/*_______________________________________ four form-specific pseudo-classes to aide in user input functionality */
+input:required:valid {
+  border: 2px solid #c7c7c7;
+  transition: ease-in-out 250ms;
+}
+
+input:focus {
+  border: 3px solid rgb(94, 168, 230);
+}
+
+textarea, input:hover {
+  background-color: #f0f0f0;
+}
+
+.section-buttons:hover {
+  cursor: pointer;
+  text-decoration: underline 2px;
+  background-color: #97271f;
+}
+/* _________________________________::before or ::after pseudo-element to denote fields with required attribute */
+.required-label::after {
+  content: " * Required";
+  color: #ff4739;
+
+}
+
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: right;
+  color: #ff4739;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  padding-bottom: 1.5rem;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  /* visibility: visible; */
+  width: 320px;
+  background-color: #30303085;
+  color: #fff;
+  text-align: center;
+  padding: 4px 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} 
+
+
+
+
+@media (max-width: 1580px) {
+  section {
+    height: fit-content;
+    padding: 2rem;
+  }
+
+.web-form-div {
+  height: fit-content;
+}
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+  
+  input:required {
+    border: 2px solid #cbaa45;
+    box-shadow: 0px 0px 5px #ffc107ad;      
+  }
+}
+
+
+
+
+
+
+@media (max-width: 420px) {
+  section {padding: 0;}
+
+  .article-wrapper {padding: 2rem 1rem;}
+
+  form {
+    border-radius: 0;
+  }
+
+  .article-wrapper article p {
+    font-size: 1.2rem;
+  }
+
+  .article-wrapper h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  label {
+    display: none;
+  }
+
+  .popup .popuptext {
+    left: 25.5%; 
+  }
+}
