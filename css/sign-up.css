@@ -137,11 +137,6 @@ form label {
 }
 
 /*_______________________________________ four form-specific pseudo-classes to aide in user input functionality */
-/* input:required {
-  border: 2px solid #cbaa45;
-  box-shadow: 0px 0px 10px #ffc10798;
-} */
-
 input:required:valid {
   border: 2px solid #c7c7c7;
   transition: ease-in-out 250ms;
@@ -154,6 +149,12 @@ input:focus {
 textarea, input:hover {
   background-color: #f0f0f0;
 }
+
+.section-buttons:hover {
+  cursor: pointer;
+  text-decoration: underline 2px;
+  background-color: #97271f;
+}
 /* _________________________________::before or ::after pseudo-element to denote fields with required attribute */
 .required-label::after {
   content: " * Required";
@@ -161,52 +162,33 @@ textarea, input:hover {
 
 }
 
-input[type="submit"]:hover {
-  cursor: pointer;
-  font-size: 1.1rem;
-  text-decoration: underline 2px;
-  background-color: #ffa8a1;
-}
 
- /* Popup container */
- .popup {
+/* Popup container */
+.popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
   text-align: right;
-  text-decoration: underline;
   color: #ff4739;
-  width: 45px;
-  margin-left: 90%;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  padding-bottom: 1.5rem;
 }
 
 /* The actual popup (appears on top) */
-.popup .popupvideo {
+.popup .popuptext {
   visibility: hidden;
   /* visibility: visible; */
-  width: 400px;
-  background-color: #ff4739;
+  width: 320px;
+  background-color: #30303085;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
+  padding: 4px 4px;
   position: absolute;
   z-index: 1;
-  top: -320%;
-  left: 160%;
-  /* margin-left: -80px; */
-}
-
-/* Popup arrow */
-.popup .popupvideo::after {
-  content: "";
-  position: absolute;
-  top: 100%;
+  bottom: 125%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  margin-left: -80px;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -227,6 +209,9 @@ input[type="submit"]:hover {
   to {opacity:1 ;}
 } 
 
+
+
+
 @media (max-width: 1580px) {
   section {
     height: fit-content;
@@ -238,27 +223,23 @@ input[type="submit"]:hover {
 }
 }
 
+
+
+
+
+
 @media (max-width: 900px) {
   
   input:required {
     border: 2px solid #cbaa45;
-    box-shadow: 0px 0px 10px #ffc10798;      /*used for when labels are taken away*/
-  }
-
-  .popup {
-    padding-bottom: 1rem;
-    padding-right: 2rem;
-    margin-right: 10px;
-  }
-
-  .popup .popupvideo {
-    visibility: hidden;
-    /* visibility: visible; */
-    width: 70vw;
-    top: -32vh;
-    left: -62.5vw;
+    box-shadow: 0px 0px 5px #ffc107ad;      
   }
 }
+
+
+
+
+
 
 @media (max-width: 420px) {
   section {padding: 0;}
@@ -282,15 +263,7 @@ input[type="submit"]:hover {
     display: none;
   }
 
-  /* .popup {
-    margin-right: 10px;
-  } */
-
-  .popup .popupvideo {
-    visibility: hidden;
-    /* visibility: visible; */
-    width: 95vw;
-    top: -30vh;
-    left: -84vw;
+  .popup .popuptext {
+    left: 25.5%; 
   }
 }
