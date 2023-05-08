@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://16bityoda.github.io/ML-Strength/css/sign-up.css" />
+    <link rel="stylesheet" href="/css/sign-up.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,41 +15,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("header").load("https://16bityoda.github.io/ML-Strength/common/header.html");
+        $("header").load("/common/header.html");
       });
     </script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("footer").load("https://16bityoda.github.io/ML-Strength/common/footer.html");
+        $("footer").load("/common/footer.html");
       });
     </script>
-    <script type="text/javascript" src="https://16bityoda.github.io/ML-Strength/javascript/sign-up.js"></script>
-    <script>
+    <script type="text/javascript" src="/javascript/sign-up.js"></script>
+      <script>
+        // When the user clicks on <div>, open the popup
         function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-
-         if (popup.classList.contains("show")) {
-        popup.play();
-        } else {
-        popup.pause();
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
         }
-      }
-
-        document.addEventListener("click", function(event) {
-        var popup = document.getElementById("myPopup");
-        var container = document.querySelector(".popup");
-        if (popup.classList.contains("show") && !container.contains(event.target)) {
-        popup.classList.remove("show");
-        popup.pause();
-        }
-      });
-
-        if (window.matchMedia("(max-width: 900px)").matches) {
-        var popup = document.querySelector(".popup");
-        popup.removeAttribute("onmouseover", "myFunction()");
-        popup.setAttribute("onclick", "myFunction()");
-      }
       </script>
     <title>Join Now!</title>
   </head>
@@ -72,9 +52,8 @@
         <form>
           <h3>Registration form:</h3>
 
-          <div class="popup" onmouseover="myFunction()" onclick="myFunction"()>Help?
-            <!-- <span class="popuptext" id="myPopup">Popup text...</span> -->
-            <video controls autoplay mute playsinline class="popupvideo" id="myPopup" src="https://16bityoda.github.io/ML-Strength/videos/atoms-6785.mp4"></video>
+          <div class="popup" onmouseover="myFunction()" onclick="myFunction()">Help?
+            <video autoplay mute controls src="/videos/atoms-6785.mp4" class="popuptext" id="myPopup"></video>
           </div> 
 
           
@@ -130,8 +109,6 @@
           
           
           <button class="section-buttons" type="submit">Submit</button>
-          <!-- <input class="section-buttons" type="submit" value="Submit"> -->
-
         </form>
       </div>
     </section>
