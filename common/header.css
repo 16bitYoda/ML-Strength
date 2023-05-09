@@ -188,10 +188,11 @@ header a:active {
 
   #header-item-1 a {
     justify-content: flex-end;
+    width: 25%;
   }
 
   #header-item-1 a img {
-    width: 50%;
+    /* width: 50%; */
     height: auto;
     padding: 0;
   }
