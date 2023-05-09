@@ -60,14 +60,14 @@
           <label for="first-name" class="required-label">First name:</label>
           <div class="input-icons" id="icon-1">
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="on" title="Please enter a valid name (letters 2 only)">
+            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="on" title="Please enter a valid name (letters only) e.g. John">
             <div class="error-message" id="name-error"></div><br>
           </div>
           
           <label for="Last-name" class="required-label">Surname:</label>
           <div class="input-icons" id="icon-2">
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="Surname" type="text" id="surname" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="on" title="Please enter a valid surname (letters only)">
+            <input placeholder="Surname" type="text" id="surname" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="on" title="Please enter a valid surname (letters only) e.g. Smith">
             <div class="error-message" id="surname-error"></div><br>
           </div>
 
@@ -82,21 +82,21 @@
           <label for="email" class="required-label">Email:</label>
           <div class="input-icons" id="icon-4">
             <i class="fa-solid fa-at" style="color: #ff4739;"></i>
-            <input placeholder="Email" type="email" id="email" class="input-field" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="on" required title="Please enter a valid email address">
+            <input placeholder="Email" type="email" id="email" class="input-field" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="on" required title="Please enter a valid email address e.g. johnsmith1@email.com">
             <div class="error-message" id="email-error"></div><br>
           </div>
           
           <label for="address" class="required-label">Address:</label>
           <div class="input-icons" id="icon-5">
             <i class="fa-solid fa-location-dot" style="color: #ff4739;"></i>
-            <input type="text" id="address" name="address" class="input-field" pattern="^[#.0-9a-zA-Z\s,-]+$" required placeholder="Address" autocomplete="on" title="Please enter your current postal address">
+            <input type="text" id="address" name="address" class="input-field" pattern="^[#.0-9a-zA-Z\s,-]+$" required placeholder="Address" autocomplete="on" title="Please enter your current postal address, suburb and postcode">
             <div class="error-message" id="address-error"></div><br>
           </div>
 
           <label for="contact-num" class="required-label">Contact number:</label>
           <div class="input-icons" id="icon-6">
             <i class="fa-solid fa-phone" style="color: #ff4739;"></i>
-            <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="on" pattern="^^([0-9]{10}|[0-9]{4}\s[0-9]{3}\s[0-9]{3}|[0-9]{4}\s[0-9]{4}|[0-9]{8})$" required placeholder="Contact number" title="Enter a valid contact number (e.g. 04xx xxx xxx or 32xx xxxx)">
+            <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="on" pattern="^^([0-9]{10}|[0-9]{4}\s[0-9]{3}\s[0-9]{3}|[0-9]{4}\s[0-9]{4}|[0-9]{8})$" required placeholder="Contact number" title="Please enter a valid contact number (e.g. 04xx xxx xxx or 32xx xxxx)">
             <div class="error-message" id="contact-num-error"></div><br>
           </div>
 
