@@ -1,18 +1,18 @@
-/* 
-font-family: 'Archivo Black', sans-serif; (weight: 400)
-font-family: 'Oswald', sans-serif; (weight: 400, 500, 600, 700)
-font-family: 'Poppins', sans-serif; (weight: 200+i, 400+i, 500+i, 700+i, 900+i)*/
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 body {
   background: black;
   color: white;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -25,14 +25,15 @@ h6 {
   font-style: italic;
 }
 
-p,
-a,
-li,
-figcaption {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
+
+h1 {font-size: 6rem;}
+h2 {font-size: 3.5rem;}
+h3 {font-size: 3rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1rem;}
+h6 {font-size: 0.8rem;}
+
+
 
 section {
   height: 100vh;
@@ -60,7 +61,6 @@ section {
   background-color: transparent;
   color: #ff4739;
   border: 2px #ff4739 solid;
-  /* border-color: #ff4739; */
   border-radius: 8px;
   transition: all 50ms ease-in-out;
 }
@@ -73,7 +73,7 @@ section {
 
 #background-image {
   display: block;
-  background-image: url(https://16bityoda.github.io/ML-Strength/images/groupworkout1.webp);
+  background-image: url(/images/groupworkout1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +91,7 @@ section {
 #first-section {
   padding: 2rem;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2rem;
   background-color: #141414c1;
   width: 50%;
   height: 60%;
@@ -108,7 +108,6 @@ section {
 #first-section article {
   text-align: left;
   padding: 2rem;
-  /* background-color: #1414149b; */
 }
 
 article p {
@@ -121,10 +120,8 @@ article p {
   height: 60%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 5rem;
   background: #141414;
-  /* border-radius: 10px; */
   padding: 2rem;
 }
 
@@ -145,8 +142,10 @@ article p {
 }
 
 /* _________________________________________timetable */
+
+
 .wrapper {
-  width: min(900px, 100% - 3rem);
+  width: 80%;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -162,7 +161,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   background: #303030;
-  /* padding: 1rem; */
 }
 
 caption, th, td {

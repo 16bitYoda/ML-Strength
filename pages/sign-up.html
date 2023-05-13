@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://16bityoda.github.io/ML-Strength/css/sign-up.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sign-up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,400;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <script src="/javascript/sign-up.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("header").load("https://16bityoda.github.io/ML-Strength/common/header.html");
+        $("header").load("/common/header.html");
       });
     </script>
     <script type="text/javascript">
       $("document").ready(function () {
-        $("footer").load("https://16bityoda.github.io/ML-Strength/common/footer.html");
+        $("footer").load("/common/footer.html");
       });
     </script>
-    <script type="text/javascript" src="https://16bityoda.github.io/ML-Strength/javascript/sign-up.js"></script>
+    <script type="text/javascript" src="/javascript/sign-up.js"></script>
       <script>
         // When the user clicks on <div>, open the popup
         function myFunction() {
@@ -53,7 +52,7 @@
           <h3>Registration form:</h3>
 
           <div class="popup" onmouseover="myFunction()" onclick="myFunction()"><p>Help?</p>
-            <video autoplay mute controls src="https://16bityoda.github.io/ML-Strength/videos/atoms-6785.mp4" class="popuptext" id="myPopup"></video>
+            <video autoplay mute controls src="/videos/atoms-6785.mp4" class="popuptext" id="myPopup"></video>
           </div> 
 
           
@@ -74,7 +73,6 @@
           <label for="membership-start-date">Membership start date:</label>
           <div class="input-icons" id="icon-3">
             <i class="fa-regular fa-calendar-days" style="color: #ff4739;"></i>
-            <!-- <input type="date" id="membership-start-date" class="input-field" name="membership-start-date"> -->
             <input placeholder="Start date"  class="input-field" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
             <div class="error-message" id="membership-error"></div><br>
           </div>

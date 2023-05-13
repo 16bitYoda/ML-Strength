@@ -1,25 +1,12 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Archivo Black", sans-serif;
-  font-style: italic;
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
-h4 {
+footer h2 {
   color: #ff4739;
   font-style: normal;
   font-size: 1.1em;
-}
-
-p,
-a,
-li,
-figcaption {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
 }
 
 .desktop-layout {
@@ -32,17 +19,6 @@ figcaption {
   width: 100%;
   padding: 2rem 8rem;
 }
-
-/* footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #141414;
-  border-top: 3px #ff46391e solid;
-  height: 300px;
-  width: 100%;
-  padding: 2rem 8rem;
-} */
 
 footer:last-child {
   align-self: center;
@@ -101,23 +77,31 @@ footer a:active {
 
 footer nav button {
   text-align: center;
-  padding: .8rem 0.3rem;
+  padding: 1rem 0.5rem;
   background-color: transparent;
-  color: #ff4739; /*_________________________________________________________________________________________/////////////////////////////////////////////CHANGED COLOR FROM WHITE TO #141414*/
-  border-style: solid;
+  color: #ff4739;
+  border: 2px #ff4739 solid;
+  border-radius: 3px;
   border-color: #ff4739;
-  border-radius: 30px;
+  width: fit-content;
   font-weight: bold;
-  font-size: .8rem;
-  width: 6rem;
-}
-
-footer button {
-  cursor: pointer;
-}
-
-footer button:hover {
   font-size: .9rem;
+  width: 100px;
+}
+
+footer nav button:hover {
+  cursor: pointer;
+  background-color: #ff4739;
+  color: #141414;
+  border-style: solid;
+  border-radius: 8px;
+  transition: all 50ms ease-in-out;
+}
+
+footer nav button:active {
+  font-size: .8rem;
+  padding: 1.059rem 0.6rem;
+  transition: all 40ms ease-in-out;
 }
 
 #logo-div {

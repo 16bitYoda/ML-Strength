@@ -7,22 +7,9 @@ header {
   border-bottom: 3px #ff46391e solid;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Archivo Black", sans-serif;
-  font-style: italic;
-}
-
-p,
-a,
-li,
-figcaption {
-  font-family: "Poppins", sans-serif;
+:root {
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 .desktop-header {
@@ -51,8 +38,6 @@ figcaption {
 header img {
   width: 100%;
   object-fit: contain;
-  /* width: 20%; */
-  /* padding-top: 0.4rem; */
 }
 
 #header-item-2 {
@@ -74,7 +59,6 @@ header img {
 
 .navbar nav {
   width: 600px;
-  /* padding: 1rem 0; */
   border-top: 4px #ff4739 solid;
 }
 
@@ -82,10 +66,8 @@ header img {
   width: 100%;
   padding-top: 1rem;
   display: flex;
-  /* justify-content: flex-end; */
   justify-content: center;
   list-style: none;
-  /* gap: 1rem; */
 }
 
 .navbar li {
@@ -102,24 +84,32 @@ header img {
 }
 
 .navbar button {
-  width: 8rem;
-  font-size: 1rem;
   text-align: center;
-  font-weight: bold;
   padding: 1rem 0.5rem;
   background-color: transparent;
-  color: #ff4739; 
-  border-style: solid;
+  color: #ff4739;
+  border: 2px #ff4739 solid;
+  border-radius: 3px;
   border-color: #ff4739;
-  border-radius: 30px;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 120px;
 }
 
-header button {
+.navbar button:hover {
   cursor: pointer;
+  background-color: #ff4739;
+  color: #141414;
+  border-style: solid;
+  border-radius: 8px;
+  transition: all 50ms ease-in-out;
 }
 
-header button:hover {
-  font-size: 1.1rem;
+.navbar button:active {
+  font-size: .9rem;
+  padding: 1.059rem 0.6rem;
+  transition: all 40ms ease-in-out;
 }
 
 header li:hover {
@@ -141,16 +131,8 @@ header a:active {
     font-size: 1rem;
   }
 
-  .navbar button {
-    padding: 0.9rem 0.4rem;
-    font-size: 0.9em;
-    width: 7rem;
-  }
-
   header img {
     width: 100%;
-    /* width: 20%; */
-    /* padding-top: 0.4rem; */
   }
 }
 
@@ -178,8 +160,6 @@ header a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom: 1px #ff4739 solid; */
-    /* padding-bottom: 2rem; */
   }  
 
   #header-item-1 {
@@ -192,7 +172,6 @@ header a:active {
   }
 
   #header-item-1 a img {
-    /* width: 50%; */
     height: auto;
     padding: 0;
   }
@@ -204,7 +183,6 @@ header a:active {
   .navbar nav {
     border-top: 2px #ff46391e solid;
     margin-top: 11%;
-    /* width: 100%; */
   }
 
   .header-item {
@@ -228,29 +206,13 @@ header a:active {
   
   .navbar nav ul {
     display: block;
-  }
-
-  #header-item-2 nav ul li {
-    padding-left: 0;
-  }   
+  }  
 
   #header-item-3 {
     padding-top: 2rem;
     justify-content: center;
   }
 
-
-
-
-  header button {
-    cursor: pointer;
-  }
-  
-  header button:hover {
-    font-size: .9rem;
-    text-decoration: none;
-  }
-  
   header li:hover {
     background-color: #202020;
     border-radius: 0;
@@ -270,6 +232,27 @@ header a:active {
 @media (max-width: 420px) {
   .nav-toggle-label {
     display: block;
+  }
+
+  #header-item-2 li {
+    text-align: center;
+  }
+
+  #header-item-2 a {
+    font-size: .9rem;
+  }
+
+  header a:hover {
+    font-size: .9rem;
+  }
+
+  .navbar button {
+    font-size: .9rem;
+    width: 120px;
+  }
+  
+  .navbar button:active {
+    font-size: .8rem;
   }
 }
   
