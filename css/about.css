@@ -67,12 +67,12 @@ section {
   color: #ff4739;
 }
 
-#first-parent-element h2 {
+#first-parent-element h1 {
   font-size: 3rem;
   padding-bottom: 2.5rem;
 }
 
-#first-parent-element h2 span {
+#first-parent-element h1 span {
   color: #ff4739;
   font-style: normal;
   font-size: 1.2em;
@@ -185,12 +185,12 @@ section {
     width: 45%;
   }
 
-  #first-parent-element h2 {
+  #first-parent-element h1 {
     font-size: 2em;
     padding-bottom: 2rem;
   }
 
-  #first-parent-element h2 span {
+  #first-parent-element h1 span {
     font-size: 1.1em;
   }
 
@@ -238,11 +238,11 @@ section {
     padding: 1rem;
   }
 
-  #first-parent-element article h2 {
+  #first-parent-element article h1 {
     text-align: center;
   }
 
-  #first-parent-element article h2 span {
+  #first-parent-element article h1 span {
     display: block;
   }
 

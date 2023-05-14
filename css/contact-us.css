@@ -68,7 +68,7 @@ section {
   font-style: italic;
   }
 
-.text-content h2 {
+.text-content h1 {
   font-size: 3rem;
   color: #ff4739;
   padding-bottom: 4rem;
@@ -121,7 +121,7 @@ section {
 
 
 @media screen and (max-width: 1580px) {
-  .text-content h2 {
+  .text-content h1 {
     font-size: 2.5em;
     padding-bottom: 2rem;
   }
@@ -154,7 +154,7 @@ section {
     height: 100%;
   }
   
-  .text-content h2 {
+  .text-content h1 {
     font-size: 3rem;
     padding-bottom: 4rem;
     padding-top: 2rem;
@@ -193,7 +193,7 @@ section {
     padding: 3rem 1rem;
   }
 
-  .text-content h2 {
+  .text-content h1 {
     font-size: 2rem;
     padding-bottom: 4rem;
     padding-top: 1rem;

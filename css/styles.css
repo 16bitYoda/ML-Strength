@@ -287,7 +287,7 @@ section {
   #content-text-1 {
     width: 100%;
     height: 100vh;
-    background-image: url(https://16bityoda.github.io/ML-Strength/images/homepage1.webp);
+    background-image: url(/images/homepage1.webp);
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;

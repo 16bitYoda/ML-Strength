@@ -73,7 +73,7 @@ section {
 
 #background-image {
   display: block;
-  background-image: url(https://16bityoda.github.io/ML-Strength/images/groupworkout1.webp);
+  background-image: url(/images/groupworkout1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -100,7 +100,7 @@ section {
   border-top: none;
 }
 
-#first-section h2 {
+#first-section h1 {
   font-size: 3em;
   color: #ff4739;
 }
@@ -195,7 +195,7 @@ tr:nth-last-of-type(2n) {
     height: auto;
   }
 
-  #first-section h2 {
+  #first-section h1 {
     font-size: 2em;
   }
 
@@ -237,7 +237,7 @@ tr:nth-last-of-type(2n) {
     border: none;
   }
   
-  #first-section h2 {
+  #first-section h1 {
     font-size: 2em;
     padding-top: 2rem;
   }

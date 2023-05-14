@@ -81,7 +81,7 @@ section {
   font-weight: 600;
 }
 
-.article-wrapper h2 {
+.article-wrapper h1 {
   font-size: 2rem;
   color: #ff4739;
   padding-bottom: 2rem;
@@ -259,7 +259,7 @@ textarea, input:hover {
     font-size: 1.2rem;
   }
 
-  .article-wrapper h2 {
+  .article-wrapper h1 {
     font-size: 2rem;
     text-align: center;
   }
