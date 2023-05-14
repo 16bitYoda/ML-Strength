@@ -161,6 +161,10 @@ header a:active {
     justify-content: space-between;
     align-items: center;
   }  
+  
+  .mobile-header label span {
+    display: none;
+  }
 
   #header-item-1 {
     justify-content: flex-end;
