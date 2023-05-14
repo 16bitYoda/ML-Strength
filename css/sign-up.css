@@ -69,22 +69,22 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .article-wrapper article {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
-.article-wrapper p {
-  font-size: 1.5rem;
+.article-wrapper article p {
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .article-wrapper h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #ff4739;
-  padding-bottom: 2rem;
 }
 
 form {
@@ -131,8 +131,9 @@ textarea::placeholder {
   padding-left: 30px;
 }
 
-form h3 {
+form h2 {
   padding-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
 form label {
