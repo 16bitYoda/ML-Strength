@@ -334,7 +334,7 @@ tr:nth-last-of-type(2n) {
 
 @media (max-width: 850px) {
   #first-section {
-    background-image: url(/images/groupworkout2.1.webp);
+    background-image: url(https://16bityoda.github.io/ML-Strength/images/groupworkout2.1.webp);
     background-repeat: none;
     background-position: center;
   }
