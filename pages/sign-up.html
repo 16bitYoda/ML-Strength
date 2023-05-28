@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://16bityoda.github.io/ML-Strength/css/sign-up.css">
+    <link rel="stylesheet" href="/css/sign-up.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,400;0,700;1,700&display=swap"
       rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script>
       $("document").ready(function () {
-        $("header").load("https://16bityoda.github.io/ML-Strength/common/header.html");
+        $("header").load("/common/header.html");
       });
     </script>
-    <script type="text/javascript">
+    <script>
       $("document").ready(function () {
-        $("footer").load("https://16bityoda.github.io/ML-Strength/common/footer.html");
+        $("footer").load("/common/footer.html");
       });
     </script>
-    <script type="text/javascript" src="https://16bityoda.github.io/ML-Strength/javascript/sign-up.js"></script>
+    <script src="/javascript/sign-up.js"></script>
       <script>
         // When the user clicks on <div>, open the popup
         function myFunction() {
@@ -38,11 +38,12 @@
       <div class="article-wrapper">
         <h1>Fill out our registration form below!</h1>
         
-        <article>
+        <div class="text-content-1">
           <p>Are you ready to take the next step in your fitness journey?</p> 
           <p>Come and experience the ML Strength difference today!</p>
           <p>We can't wait to see you in the gym!</p>
-        </article>
+        </div>
+        
       </div>
 
 
@@ -51,46 +52,45 @@
           <h2>Registration form:</h2>
 
           <div class="popup" onmouseover="myFunction()" onclick="myFunction()"><p>Help?</p>
-            <video autoplay mute controls src="https://16bityoda.github.io/ML-Strength/videos/atoms-6785.mp4" class="popuptext" id="myPopup"></video>
+            <video autoplay controls muted src="/videos/atoms-6785.mp4" class="popuptext" id="myPopup"></video>
           </div> 
 
-          
-         <label for="first-name" class="required-label" id="first-name-label" aria-required="true">First name:</label>
+          <label for="first-name" class="required-label" id="first-name-label">First name:</label>
           <div class="input-icons" id="icon-1">
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="First name" type="text" id="name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required placeholder="First name" autocomplete="on" title="Please enter a valid name (letters only) e.g. John" aria-labelledby="first-name-label" aria-describedby="name-error">
+            <input placeholder="First name" type="text" id="first-name" class="input-field" name="name" pattern="[a-zA-Z]{1,}" required autocomplete="on" title="Please enter a valid name (letters only) e.g. John" aria-labelledby="first-name-label" aria-describedby="name-error">
             <div class="error-message" id="name-error" role="alert" aria-live="assertive"></div><br>
           </div>
 
-          <label for="last-name" class="required-label" id="last-name-label" aria-required="true">Surname:</label>
+          <label for="surname" class="required-label" id="last-name-label">Surname:</label>
           <div class="input-icons" id="icon-2">
             <i class="fa-solid fa-user-pen" style="color: #ff4739;"></i>
-            <input placeholder="Surname" type="text" id="surname" class="input-field" name="surname" pattern="[a-zA-Z]{1,}" required placeholder="Surname" autocomplete="on" title="Please enter a valid surname (letters only) e.g. Smith" aria-labelledby="last-name-label" aria-describedby="surname-error">
+            <input placeholder="Surname" type="text" id="surname" class="input-field" name="surname" pattern="[a-zA-Z]{1,}" required autocomplete="on" title="Please enter a valid surname (letters only) e.g. Smith" aria-labelledby="last-name-label" aria-describedby="surname-error">
             <div class="error-message" id="surname-error" role="alert" aria-live="assertive"></div><br>
           </div>
 
           <label for="membership-start-date" id="membership-start-date-label">Membership start date:</label>
           <div class="input-icons" id="icon-3">
             <i class="fa-regular fa-calendar-days" style="color: #ff4739;"></i>
-            <input placeholder="Start date" class="input-field" type="text" name="membership-start-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" aria-labelledby="membership-start-date-label" aria-describedby="membership-error">
+            <input placeholder="Start date" class="input-field" id="membership-start-date" type="text" name="membership-start-date" onfocus="(this.type='date')" onblur="(this.type='text')" aria-labelledby="membership-start-date-label" aria-describedby="membership-error">
             <div class="error-message" id="membership-error" role="alert" aria-live="assertive"></div><br>
           </div>
 
-          <label for="email" class="required-label" id="email-label" aria-required="true">Email:</label>
+          <label for="email" class="required-label" id="email-label">Email:</label>
           <div class="input-icons" id="icon-4">
             <i class="fa-solid fa-at" style="color: #ff4739;"></i>
             <input placeholder="Email" type="email" id="email" class="input-field" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" autocomplete="on" required title="Please enter a valid email address e.g. johnsmith1@email.com" aria-labelledby="email-label" aria-describedby="email-error">
             <div class="error-message" id="email-error" role="alert" aria-live="assertive"></div><br>
           </div>
 
-          <label for="address" class="required-label" id="address-label" aria-required="true">Address:</label>
+          <label for="address" class="required-label" id="address-label">Address:</label>
           <div class="input-icons" id="icon-5">
             <i class="fa-solid fa-location-dot" style="color: #ff4739;"></i>
             <input type="text" id="address" name="address" class="input-field" pattern="^[#.0-9a-zA-Z\s,-]+$" required placeholder="Address" autocomplete="on" title="Please enter your current postal address, suburb and postcode" aria-labelledby="address-label" aria-describedby="address-error">
             <div class="error-message" id="address-error" role="alert" aria-live="assertive"></div><br>
           </div>
 
-          <label for="contact-num" class="required-label" id="contact-num-label" aria-required="true">Contact number:</label>
+          <label for="contact-num" class="required-label" id="contact-num-label">Contact number:</label>
           <div class="input-icons" id="icon-6">
             <i class="fa-solid fa-phone" style="color: #ff4739;"></i>
             <input type="tel" id="contact-num" name="contact-num" class="input-field" autocomplete="on" pattern="^^([0-9]{10}|[0-9]{4}\s[0-9]{3}\s[0-9]{3}|[0-9]{4}\s[0-9]{4}|[0-9]{8})$" required placeholder="Contact number" title="Please enter a valid contact number (e.g. 04xx xxx xxx or 32xx xxxx)" aria-labelledby="contact-num-label" aria-describedby="contact-num-error">
@@ -103,8 +103,10 @@
             <textarea id="medical" name="medical" class="input-field" placeholder="Please list any allergies and/or medical conditions in case of an emergency." aria-labelledby="medical-label"></textarea>
             <div class="error-message" id="medical-error" role="alert" aria-live="assertive"></div><br>
           </div>
-         
-          <button class="section-buttons" type="submit">Submit</button>
+
+
+
+          <button class="section-buttons" type="submit">SUBMIT</button>
         </form>
       </div>
     </section>

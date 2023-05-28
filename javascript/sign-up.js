@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const nameInput = document.getElementById("name");
+  const nameInput = document.getElementById("first-name");
   const surnameInput = document.getElementById("surname");
   const emailInput = document.getElementById("email");
   const addressInput = document.getElementById("address");

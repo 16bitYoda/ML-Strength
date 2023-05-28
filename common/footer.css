@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -10,9 +17,16 @@ footer h2 {
 }
 
 .desktop-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #141414;
   border-top: 3px #ff46391e solid;
   height: 300px;
@@ -21,24 +35,45 @@ footer h2 {
 }
 
 footer:last-child {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 footer nav {
   height: 100%;
   width: 15%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer ul {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 10rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10rem;
+     -moz-column-gap: 10rem;
+          column-gap: 10rem;
   list-style: none;
   text-align: center;
   padding: 1.5rem 0;
@@ -58,7 +93,7 @@ footer li:hover {
   border-radius: 5px;
 }
 
-footer a {
+footer li a {
   color: white;
   font-size: 0.8rem;
   font-weight: 700;
@@ -70,46 +105,71 @@ footer nav a:hover {
   font-size: .9rem;
 }
 
-footer a:active {
+footer li a:active {
   color: #ff4739;
-  text-decoration: underline 2px;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
 }
 
-footer nav button {
-  text-align: center;
-  padding: 1rem 0.5rem;
-  background-color: transparent;
+footer nav .footer-button {
   color: #ff4739;
+  font-size: .9rem;
+}
+
+.footer-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
   border: 2px #ff4739 solid;
   border-radius: 3px;
   border-color: #ff4739;
-  width: fit-content;
   font-weight: bold;
-  font-size: .9rem;
   width: 100px;
+  height: 55px;
 }
 
-footer nav button:hover {
+.footer-button:hover {
   cursor: pointer;
   background-color: #ff4739;
   color: #141414;
   border-style: solid;
   border-radius: 8px;
+  -webkit-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
   transition: all 50ms ease-in-out;
 }
 
-footer nav button:active {
+.footer-button:active {
   font-size: .8rem;
-  padding: 1.059rem 0.6rem;
+  -webkit-transition: all 40ms ease-in-out;
+  -o-transition: all 40ms ease-in-out;
   transition: all 40ms ease-in-out;
 }
 
 #logo-div {
   padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -130,15 +190,28 @@ footer nav button:active {
 #footer-social-media {
   width: 15%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 #footer-social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1rem;
   padding-top: 1.5rem;
 }
@@ -157,10 +230,17 @@ footer nav button:active {
     display: none;}
 
   .mobile-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-   flex-direction: column;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    width: 100%;
-   align-items: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
    padding: 1rem;
    padding-top: 2rem;
    gap: 1rem;
@@ -198,3 +278,4 @@ footer nav button:active {
 
   }
 }
+
